@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { addProduct, getProducts, getProduct, searchProducts } from "../Controllers/productController";
+import { addProduct, getProducts, getProduct, searchProducts, paginateProductsHandler } from "../Controllers/productController";
 
 const productRoute = Router();
 
@@ -13,9 +13,11 @@ productRoute.get("/", getProducts);
 productRoute.get("/:id", getProduct);
 
 // Route to search products
-productRoute.get("/search", searchProducts);
+productRoute.post("/search", searchProducts);
 
 
 //paginate products
-productRoute.get("/", paginateProductsHandler);
+productRoute.post("/paginate", paginateProductsHandler);
+
+
 export default productRoute;
