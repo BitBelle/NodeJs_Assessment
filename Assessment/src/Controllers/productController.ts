@@ -100,7 +100,10 @@ export const paginateProductsHandler = async (req: Request, res: Response) => {
 
         res.status(200).json(products);
     } catch (error) {
-        console.error('Error paginating products:', error);
+        
         res.status(500).json({ message: 'Failed to paginate products'});
     }
 };
+
+
+
