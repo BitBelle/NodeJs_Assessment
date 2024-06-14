@@ -2,9 +2,9 @@ POST http://localhost:4000/product
 Content-Type: application/json
 
 {
-    "product_Name": "Skirt",
-    "product_Description": "Skater",
-    "product_Price": 1500
+    "product_Name": "Bag",
+    "product_Description": "Handbag",
+    "product_Price": 4500
 }
 
 #### a product
@@ -18,6 +18,17 @@ GET http://localhost:4000/products
 ####search product
 POST http://localhost:4000/product/search?q=Shoes
 
+
 ####paginate products
-GET http://localhost:4000/product/
+POST http://localhost:4000/product/paginate 
+Content-Type: application/json
+
+{
+     "page": 1,
+    "size": 5
+}
+
+
+
+
 
